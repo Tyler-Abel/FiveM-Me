@@ -1,7 +1,8 @@
 RegisterCommand("me", function(source, args, rawCommand)
     if (source > 0) then
+        local string = table.concat(args, " ")
         TriggerClientEvent("chat:addMessage", -1, {
-            args = { "Me: ", args},
+            args = { "Me: ", string},
             color = { 5, 255, 255 }
         })
     else
